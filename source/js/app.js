@@ -223,9 +223,6 @@ window.addEventListener('resize', function () {
 
 // Градиент у тарифов при переполнении в мобильной версии
 
-let rates = document.querySelector('.rates');
-let ratesList = document.querySelector('.rates__list');
-let ratesLinearGradientWHiteMobile = 542 + ratesList.offsetHeight + "px";
 let reviews = document.querySelector('.reviews');
 let pageMainWrapper = document.querySelector('.page-main__wrapper');
 let ratesWrapperLinearGradientTablet = 378 + (-(298 - reviews.offsetHeight)) + "px";
@@ -271,11 +268,13 @@ window.addEventListener('resize', function () {
 let center = [59.939352, 30.323324];
 
 function init() {
+  // eslint-disable-next-line no-undef
   let map = new ymaps.Map('map', {
     center: center,
     zoom: 15.5
   });
 
+  // eslint-disable-next-line no-undef
   let placemark = new ymaps.Placemark([59.938631, 30.323037], {}, {
     iconLayout: 'default#image',
     iconImageHref: './img/icons/map-marker.svg',
@@ -292,6 +291,7 @@ function init() {
   map.geoObjects.add(placemark);
 }
 
+// eslint-disable-next-line no-undef
 ymaps.ready(init);
 
 
